@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-page = requests.get("https://forecast.weather.gov/MapClick.php?lat=27.6062&lon=-80.4268#.YVRXoJrMKUk"
+page = requests.get("https://forecast.weather.gov/MapClick.php?lat=27.6062&lon=-80.4268#.YVRXoJrMKUk"  # Insert the .gov like of your area
                     "637245000000064&lon=-80.48609789999995#.Xp8xVFNKjOQ")
 soup = BeautifulSoup(page.content, "html.parser")
 week = soup.find(id='seven-day-forecast-body')
